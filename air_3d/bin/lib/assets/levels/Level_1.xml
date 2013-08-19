@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<level id="1">
+	<chracters>
+		<object id="pers" type="HERO"><!-- id:int; type:HERO, UNIT, BUILDING, DECOR; -->
+			<mesh lod="false" id="pers" /><!-- если LOD, то несколько мешей с id -->
+			<textures useInternal="true"><!-- useInternal: true - use from Collada; false - use from AssetsManager -->
+				<!-- example: <texture type="" id="" /> -->
+			</textures>
+			<animation>
+				<!--  -->
+			</animation>
+		</object>
+	</chracters>
+	<!--  -->
+	<decor>
+		<!--  -->
+	</decor>
+	<!--  -->
+	<stage>
+		<skybox>
+			<!--  -->
+		</skybox>
+		<floor>
+			<object id="floor" type="null">
+				<mesh lod="false" id="floor" />
+				<textures useInternal="true"><!-- useInternal: true - use from Collada; false - use from AssetsManager -->
+					<!-- example: <texture type="" id="" /> -->
+				</textures>
+			</object>
+			<!--  -->
+		</floor>
+		<camera x="" y="" z="" target="" distance="" defaultController="" />
+		<!--  -->
+		<objectsInStage>
+			<!-- All objects on stage -->
+			<obj id="pers" xyz="1|1|1" active="false" animation="null" />
+		</objectsInStage>
+	</stage>
+</level>

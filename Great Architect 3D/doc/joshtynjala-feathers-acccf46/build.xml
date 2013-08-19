@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="feathers" default="build" basedir=".">
+	
+	<!-- build.local.properties and sdk.local.proprties are optional files that
+		can be used to override the default properties. -->
+	<property file="./sdk.local.properties"/>
+	<property file="./sdk.properties"/>
+	<property file="./build.local.properties"/>
+	<property file="./build.properties"/>
+
+	<target name="build">
+		<delete dir="${output.path}"/>
+
+		<echo message="Building starling.swc"/>
+		<java jar="${compc}" dir="${starling.root}" fork="true" failonerror="true">
+			<arg line="+flexlib='${flexframework.root}'"/>
+			<arg line="--swf-version=${swf.version}"/>
+			<arg line="--target-player=${player.version}"/>
+			<arg line="--source-path+=."/>
+			<arg line="--include-sources+=."/>
+			<arg line="--external-library-path+='${flexframework.lib}'"/>
+			<arg line="--output '${dependency.output}/starling.swc'"/>
+		</java>
+
+		<echo message="Building feathers.swc"/>
+		<java jar="${compc}" dir="${basedir}" fork="true" failonerror="true">
+			<arg line="+flexlib='${flexframework.root}'"/>
+			<arg line="--swf-version=${swf.version}"/>
+			<arg line="--target-player=${player.version}"/>
+			<arg line="--namespace+=${mxml.namespace},mxml-manifest.xml"/>
+			<arg line="--source-path+='source'"/>
+			<arg line="--include-namespaces+=${mxml.namespace}"/>
+			<arg line="--include-sources+='source'"/>
+			<arg line="--external-library-path+='${dependency.output}'"/>
+			<arg line="--external-library-path+='${flexframework.lib}'"/>
+			<arg line="--output '${swc.output}'"/>
+		</java>
+
+		<echo message="Generating Documentation"/>
+		<java jar="${asdoc}" dir="${basedir}" fork="true" failonerror="true">
+			<arg line="+flexlib='${flexframework.root}'"/>
+			<arg line="--swf-version=${swf.version}"/>
+			<arg line="--target-player=${player.version}"/>
+			<arg line="--source-path+='source'"/>
+			<arg line="--library-path+='${dependency.output}'"/>
+			<arg line="--doc-sources+='source'"/>
+			<arg line="--external-library-path+='${flexframework.lib}'"/>
+			<arg line="--main-title 'Feathers API Documentation'"/>
+			<arg line="--window-title 'Feathers UI for Starling API Documentation'"/>
+			<arg value="--footer"/>
+			<arg value="${footer.text}"/>
+			<arg line="--package-description-file package-descriptions.xml"/>
+			<arg line="--output '${docs.output}'"/>
+		</java>
+
+		<delete dir="${dependency.output}"/>
+	</target>
+</project>

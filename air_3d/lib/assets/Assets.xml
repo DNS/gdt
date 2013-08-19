@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- priority: 1; 2; 3; ... -->
+<!-- types:	bitmap = png, jpg;	sound = mp3; swf = swf; xml = xml; data = data -->
+<data>
+	<desktop>
+		<gui>
+			<asset path="/lib/assets/buttons/window_close.png" type="bitmap" name="window_close" />
+			<asset path="/lib/assets/bg/bg.png" type="bitmap" name="main_dialog_bg" />
+		</gui>
+		
+		<levels>
+			<level path="/lib/assets/levels/Level_1.xml" type="xml" name="level_1" />
+		</levels>
+		
+		<game><!-- gameType: model = 3d object; texture = просто текстура -->
+			<asset path="/lib/assets/game/pers.DAE" type="xml" name="pers" gameType="model" />
+			<asset path="/lib/assets/game/floor.DAE" type="xml" name="floor" gameType="model" />
+			<asset path="/lib/assets/game/maps/grass.jpg" type="bitmap" name="grass" gameType="texture" />
+			<asset path="/lib/assets/game/maps/dwarf.jpg" type="bitmap" name="dwarf" gameType="texture" />
+		</game>
+	</desktop>
+</data>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////	
+//	ADOBE SYSTEMS INCORPORATED																		  //
+//	Copyright 2011 Adobe Systems Incorporated														  //
+//	All Rights Reserved.																			  //
+//																									  //
+//	NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the		  //
+//	terms of the Adobe license agreement accompanying it.  If you have received this file from a	  //
+//	source other than Adobe, then your use, modification, or distribution of it requires the prior	  //
+//	written permission of Adobe.																	  //
+/////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" applicationDPI="160" applicationComplete="view1_creationCompleteHandler(event)">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			import com.adobe.nativeExtensions.Gyroscope;
+			import com.adobe.nativeExtensions.GyroscopeEvent;
+			
+			import mx.events.FlexEvent; 
+			private var g1:Gyroscope = null;
+			private var g2:Gyroscope = null;
+			private var g3:Gyroscope = null;
+			private var c:int = 1;
+			private var tmr:Timer = new Timer(3000);
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				trace("I am here...");
+				if(Gyroscope.isSupported)
+				{
+					g1 = new Gyroscope();
+					g1.addEventListener(GyroscopeEvent.UPDATE,onChange1);
+					
+					g2 = new Gyroscope();
+					g2.setRequestedUpdateInterval(1000);
+					g2.addEventListener(GyroscopeEvent.UPDATE,onChange2);
+					
+					g3 = new Gyroscope();
+					g3.setRequestedUpdateInterval(2000);
+					g3.addEventListener(GyroscopeEvent.UPDATE,onChange3);
+					
+					tmr.addEventListener(TimerEvent.TIMER,work);
+					tmr.start();
+				}else{
+					trace("no gyro"); 
+				} 
+			}
+			
+			private function work(t:TimerEvent):void{
+				if(c == 1){
+					g1.removeEventListener(GyroscopeEvent.UPDATE,onChange1);
+					g1.dispose();
+					g1 = null;
+				}else if(c == 2){
+					g2.removeEventListener(GyroscopeEvent.UPDATE,onChange2);
+					g2.dispose();
+					g2 = null;
+				}else if(c == 3){
+					g3.removeEventListener(GyroscopeEvent.UPDATE,onChange3);
+					g3.dispose();
+					g3 = null;
+				}
+				c++; 
+			}
+			private function onChange1(e:GyroscopeEvent):void{
+				trace("From g1: " + e.x + " " + e.y + " " + " " + e.z);
+				t1.text = e.x + " " + e.y + " " + " " + e.z; 
+			} 
+			
+			private function onChange2(e:GyroscopeEvent):void{
+				trace("From g2: " + e.x + " " + e.y + " " + " " + e.z);
+				t2.text = e.x + " " + e.y + " " + " " + e.z;
+			}
+			
+			private function onChange3(e:GyroscopeEvent):void{
+				trace("From g3: " + e.x + " " + e.y + " " + " " + e.z);
+				t3.text = e.x + " " + e.y + " " + " " + e.z;
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:TextInput id="t1" />
+	<s:TextInput id="t2" />
+	<s:TextInput id="t3" />
+</s:Application>

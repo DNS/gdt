@@ -1,0 +1,222 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeSDKPreference = iphoneos4.3;
+		activeTarget = D2AAC07D0554694100DB518D /* gyroscopeExtension */;
+		breakpoints = (
+		);
+		codeSenseManager = 0D4C7EB9141E70E1002B8DB4 /* Code sense */;
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					880.58349609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					993,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					1007,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					969,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					953,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 338050176;
+			PBXWorkspaceStateSaveDate = 338050176;
+		};
+		perUserProjectItems = {
+			0D74BB8B14263C6F000F57B4 /* PBXTextBookmark */ = 0D74BB8B14263C6F000F57B4 /* PBXTextBookmark */;
+			0D74BB9714263C8D000F57B4 /* PBXTextBookmark */ = 0D74BB9714263C8D000F57B4 /* PBXTextBookmark */;
+			0D76D1D3141FA7E600B513D4 /* PlistBookmark */ = 0D76D1D3141FA7E600B513D4 /* PlistBookmark */;
+			0DC4895A1421EB7F00CCB395 /* PBXTextBookmark */ = 0DC4895A1421EB7F00CCB395 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 0D4C7EB8141E70E1002B8DB4 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	0D4C7EB8141E70E1002B8DB4 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	0D4C7EB9141E70E1002B8DB4 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	0D74BB8B14263C6F000F57B4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
+		name = "GyroscopeExtension.m: 12";
+		rLen = 0;
+		rLoc = 809;
+		rType = 0;
+		vrLen = 1117;
+		vrLoc = 107;
+	};
+	0D74BB9714263C8D000F57B4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */;
+		name = "GyroscopeExtension.m: 14";
+		rLen = 0;
+		rLoc = 846;
+		rType = 0;
+		vrLen = 1117;
+		vrLoc = 107;
+	};
+	0D76D196141FA32A00B513D4 /* ResourceRules.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
+		name = ResourceRules.plist;
+		path = /Users/airqe/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist;
+		sourceTree = "<absolute>";
+	};
+	0D76D1D3141FA7E600B513D4 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 0D76D196141FA32A00B513D4 /* ResourceRules.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/airqe/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	0DC4895A1421EB7F00CCB395 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0DC4895B1421EB7F00CCB395 /* objc.h */;
+		name = "objc.h: 51";
+		rLen = 32;
+		rLoc = 1545;
+		rType = 0;
+		vrLen = 559;
+		vrLoc = 1158;
+	};
+	0DC4895B1421EB7F00CCB395 /* objc.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = objc.h;
+		path = /Users/airqe/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/objc/objc.h;
+		sourceTree = "<absolute>";
+	};
+	3042C8431342EDEC00A6FBD5 /* GyroscopeExtension.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 2808}}";
+			sepNavSelRange = "{846, 0}";
+			sepNavVisRange = "{107, 1117}";
+			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
+		};
+	};
+	D2AAC07D0554694100DB518D /* gyroscopeExtension */ = {
+		activeExec = 0;
+	};
+}

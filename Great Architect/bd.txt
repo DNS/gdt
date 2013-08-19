@@ -1,0 +1,4 @@
+BD:appBd
+
+User: appBdUser
+Pass: 3fGeYQnh

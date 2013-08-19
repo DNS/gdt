@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<models name="3ds">
+		<model name="floor" url="models/map.3DS" texture="trava" level="1" />
+		<model name="house" url="models/house.3DS" texture="drova" level="1" />
+	</models>
+	
+	<textures name="textures">
+		<texture name="drova" type="StandardMaterial" diffuse="models/002101.jpg" normal="models/002101.jpg" specular="" opacity="" />
+		<texture name="trava" type="StandardMaterial" diffuse="models/grass_15.jpg" normal="models/grass_15.jpg" specular="" opacity="" />
+	</textures>
+</data>

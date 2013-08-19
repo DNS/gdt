@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GDT</title>
+
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/LGE_WebAppFramework-min.css"/>
+
+<script language="javaScript" type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<!--<script language="javaScript" type="text/javascript" src="js/LGE_WebAppFramework-min.js"></script>-->
+<script language="javaScript" type="text/javascript" src="js/Main.js"></script>
+
+<script type="text/javascript">
+	var mainButtons = new Array();
+	mainButtons[0] = "films"
+	mainButtons[1] = "serials";
+	mainButtons[2] = "cartoons";
+	mainButtons[3] = "documentals";
+	mainButtons[4] = "iptv";
+	//
+	var currentPage = "main";
+	
+	var currentFocus = 0;
+	//
+	$(document).ready(function() {
+		//var app = new LGE.initialize();
+		});
+	//
+	function focusEvent(target) {
+		if(target == 1){currentFocus = currentFocus + 1;}
+		if(target == -1){currentFocus = currentFocus - 1;}
+		//
+		var buttons = new Array();
+		if(currentPage == "main"){
+			buttons = mainButtons;
+			}
+		//
+		if(currentFocus > (buttons.length - 1)){
+			currentFocus = (buttons.length - 1);
+			}
+		if(currentFocus < 0){
+			currentFocus = 0;
+			}
+		//
+		for(var i = 0 ; i < buttons.length ; i++){
+			if(i == currentFocus){
+				document.getElementById(buttons[i]).focus();
+				}else{
+					document.getElementById(buttons[i]).blur();
+					}
+			}
+		}
+	//
+	function controlEvent(event){
+	var keyCode;
+	if(window.event) { // IE
+		keyCode = event.keyCode;
+		} else if(event.which) { // Netscape/Firefox/Opera
+			keyCode = event.which;
+				} else {
+					alert("Unknown event type.");
+					return ;
+					}
+	//
+	switch(keyCode) {
+		case 37:// left
+			focusEvent(-1);
+			break;
+		case 39:// right
+			focusEvent(1);
+			break;
+		case 38:// up
+			//
+			break;
+		case 40:// down
+			//window.NetCastLaunchQMENU();
+			break;
+		case 13:// OK
+			//window.NetCastLaunchRATIO();
+			break;
+		case 403:// red
+			//
+			break;
+		case 404:// green
+			//
+			break;
+		case 405:// yellow
+			//
+			break;
+		case 406:// blue
+			window.NetCastLaunchQMENU();
+			break;
+		case 461:
+			window.NetCastBack();
+			break;
+		default :
+			break;
+		}
+	}
+</script>
+</head>
+
+<body style="overflow-x:hidden; overflow-y:hidden; margin:0px;" onkeydown="controlEvent(event);" onmousedown="return false;" onselectstart="return false;">
+	<!-- main menu -->
+	<div id="exua" style="position:absolute; bottom:5px; width:100%; height:60px;">
+    	<button id="films" onclick="traceMe('click0: '+id); loadExuaPart();" class="mainButtons">Фильмы</button>
+        <button id="serials" onclick="traceMe('click1: '+id);" class="mainButtons">Сериалы</button>
+        <button id="cartoons" onclick="traceMe('click2: '+id);" class="mainButtons">Мультфильмы</button>
+        <button id="documentals" onclick="traceMe('click3: '+id);" class="mainButtons">Документальные</button>
+        <div style="float:right;">
+        	<button id="iptv" onclick="traceMe('click4: '+id);" class="mainButtons">IPTV</button>
+        </div>
+    </div>
+    <!-- main menu end -->
+    
+    <!-- items -->
+    <div class="itemsPage">
+    	<div class="">
+        	
+        </div>
+    </div>
+    <!-- items end -->
+    
+    <!-- media -->
+    
+	<!-- media end -->
+    
+    <!-- iptv -->
+    <!--<textarea name="info" id="info" style="width:100%; height:400px"></textarea>-->
+    <div id="iptvMenu" style="position:absolute; bottom:10px; height:80px; padding-left:10px; visibility:hidden;">
+    	<a id="ch1" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/1plus1.jpg"/></div></a>
+        <a id="ch2" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/inter.jpg"/></div></a>
+        <a id="ch3" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/ictv.jpg"/></div></a>
+        <a id="ch4" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/mega.jpg"/></div></a>
+        <a id="ch5" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/stb.jpg"/></div></a>
+        <a id="ch6" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/tonis.jpg"/></div></a>
+        <a id="ch7" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/novuj-kanal.jpg"/></div></a>
+        <a id="ch8" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/inter.jpg"/></div></a>
+        <a id="ch9" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/inter.jpg"/></div></a>
+        <a id="ch10" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/inter.jpg"/></div></a>
+        <a id="ch11" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/inter.jpg"/></div></a>
+        <a id="ch12" href="#" class="tvItem" onfocus="focusEvent(id);"><div><img src="img/inter.jpg"/></div></a>
+    </div>
+    <!-- iptv end --> 
+</body>
+</html>
